@@ -1,0 +1,6 @@
+Credentials cache: API:16523
+        Principal: acresap@42.FR
+
+  Issued                Expires               Principal
+Nov 18 13:51:15 2015  Nov 18 23:51:15 2015  krbtgt/42.FR@42.FR
+Nov 18 14:20:03 2015  Nov 18 23:51:15 2015  ldap/ldap-proxy.42.fr@42.FR
