@@ -6,11 +6,7 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 09:11:33 by acresap           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2015/12/10 20:07:20 by acresap          ###   ########.fr       */
-=======
-/*   Updated: 2015/12/10 20:14:45 by acresap          ###   ########.fr       */
->>>>>>> 2e11b931527c7e3d442aac32c9c596b0aa70b647
+/*   Updated: 2015/12/17 18:05:10 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +18,9 @@ void	ft_print_alphabet(void)
 
 	i = 'a';
 	while (i <= 'z')
-<<<<<<< HEAD
 	{
 		ft_putchar(i);
 		i++;
 	}
 	ft_putchar('\n');
-=======
-		ft_putchar(i++);
->>>>>>> 2e11b931527c7e3d442aac32c9c596b0aa70b647
 }

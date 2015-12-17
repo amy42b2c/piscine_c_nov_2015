@@ -6,21 +6,13 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/06 12:47:39 by acresap           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2015/12/15 14:00:53 by acresap          ###   ########.fr       */
-=======
-/*   Updated: 2015/12/10 20:36:12 by acresap          ###   ########.fr       */
->>>>>>> 2e11b931527c7e3d442aac32c9c596b0aa70b647
+/*   Updated: 2015/12/17 17:29:03 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-<<<<<<< HEAD
-void	ft_print_comb(char c)
-=======
 void	ft_print_comb(void)
->>>>>>> 2e11b931527c7e3d442aac32c9c596b0aa70b647
 {
 	char	d1;
 	char	d2;
