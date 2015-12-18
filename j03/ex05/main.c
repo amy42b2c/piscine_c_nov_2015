@@ -5,35 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/17 17:21:10 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/17 18:07:33 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/18 19:39:27 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/18 19:40:58 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putnbr(int nb);
-void	ft_print_reverse_alphabet(void);
-int		ft_print_numbers(void);
-void	ft_print_comb2(void);
-void	ft_print_comb(void);
-void	ft_print_alphabet(void);
-void	ft_is_negative(int n);
-void	ft_putchar(char c);
+void	ft_putstr(char *str);
 
-int	main()
+int	main(void)
 {
-	ft_print_alphabet();
-	ft_putchar('\n');
-	ft_print_reverse_alphabet();
-	ft_putchar('\n');
-	ft_print_numbers();
-	ft_putchar('\n');
-	ft_is_negative(21);
-	ft_putchar('\n');
-	ft_is_negative(0);
-	ft_putchar('\n');
-	ft_print_comb();
-	ft_putchar('\n');
-	ft_print_comb2();
-	ft_putchar('\n');
+	ft_putstr("I'm having soooo much fun tonight!");
 	return (0);
 }

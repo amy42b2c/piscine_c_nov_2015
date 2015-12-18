@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 14:16:11 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/18 16:30:55 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/18 19:27:46 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/18 20:06:34 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print_reverse_alphabet(void)
+void	ft_putstr(char *str)
 {
-	char	i;
-
-	i = 'z';
-	while (i >= 'a')
+	int	i;
+	
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(i);
-		i--;
+		ft_putchar(str[i]);
+		i++;
 	}
 }

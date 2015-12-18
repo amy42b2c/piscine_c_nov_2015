@@ -6,7 +6,7 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 09:11:33 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/17 18:05:10 by acresap          ###   ########.fr       */
+/*   Updated: 2015/12/18 18:05:18 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@ void	ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
-	char i;
+	int		i;
+	char	c;
 
-	i = 'a';
-	while (i <= 'z')
+	i = 0;
+	c = 'a';
+	while (i < 26)
 	{
-		ft_putchar(i);
+		ft_putchar(c + i);
 		i++;
 	}
-	ft_putchar('\n');
 }
