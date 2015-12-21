@@ -6,13 +6,13 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/18 19:39:27 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/18 19:40:58 by acresap          ###   ########.fr       */
+/*   Updated: 2015/12/21 09:32:28 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putstr(char *str);
 
-int	main(void)
+int		main(void)
 {
 	ft_putstr("I'm having soooo much fun tonight!");
 	return (0);

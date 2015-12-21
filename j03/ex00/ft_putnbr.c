@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 19:27:46 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/21 09:33:14 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/21 10:47:30 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_putstr(char *str)
+void	ft_putnbr(int nbr)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	if (nbr < 0)
 	{
-		ft_putchar(str[i]);
-		i++;
+		ft_putchar('-');
+		ft_putnbr(-nbr);
+	}
+	else if (nbr > 9)
+	{
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
+	}
+	else
+	{
+		ft_putchar(nbr + '0');
 	}
 }

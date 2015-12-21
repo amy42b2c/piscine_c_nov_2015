@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/18 19:27:46 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/21 09:33:14 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/17 18:46:34 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/21 10:53:46 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+void	ft_putnbr(int nbr);
+void	ft_ft(int *nbr);
 
-void	ft_putstr(char *str)
+int		main(void)
 {
-	int	i;
+	int	*nbr;
+	int	n;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	nbr = &n;
+	n = 0;
+	ft_ft(nbr);
+	ft_putnbr(n);
+	return (0);
 }
