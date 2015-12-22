@@ -6,7 +6,7 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/22 17:12:57 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/22 17:39:45 by acresap          ###   ########.fr       */
+/*   Updated: 2015/12/22 19:24:58 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,5 @@ int		main(void)
 	printf("The length of my string is: %d", ft_strlen(ptr));
 	str = ptr / 2;
 	*ft_strrev(str);
+	return (0);
 }
