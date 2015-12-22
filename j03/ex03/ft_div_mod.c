@@ -6,7 +6,7 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/17 19:00:38 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/17 23:33:25 by acresap          ###   ########.fr       */
+/*   Updated: 2015/12/22 17:01:58 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@ void	ft_putchar(char c);
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*div = a/b;
-	*mod = a%b;
+	*div = a / b;
+	*mod = a % b;
 }
