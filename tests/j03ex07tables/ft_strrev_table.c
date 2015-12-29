@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrev_table.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/22 17:12:57 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/22 21:35:09 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/18 19:31:53 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/28 12:52:16 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-char	*ft_strrev(char *str);
-
-int		main(int argc, char *argv[])
+int		ft_strlen(char *str)
 {
-	char	*myparam;
+	int		length;
 
-	myparam = (char *)malloc(strlen(argv[1]) + 1);
-	strcpy(myparam, argv[1]);
-	if (argc != 2)
-		return (33);
-	printf("\nLe parametre avant %s", myparam);
-	ft_strrev(myparam);
-	printf("\nLe parametre apres %s\n", myparam);
-	return (0);
+	length = 0;
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+	return (length);
+}
+
+char	*ft_strrev_table(char *str)
+{
+	int		len;
+	int		count;
+	char	tmp;
+
+	len = ft_strlen(str);
+	count = 0;
+	while (count < len / 2)
+	{
+		tmp = str[count];
+		str[count] = str[(len - 1) - count];
+		str[(len - 1) - count] = tmp;
+		count = count + 1;
+	}
+	return (str);
 }

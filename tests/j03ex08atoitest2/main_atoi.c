@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   main_atoi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/28 08:57:58 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/28 18:11:09 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/28 18:59:22 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-void	ft_putnbr(int nbr)
+int		main(void)
 {
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
-}
+	int		val;
+	char	str[20];
 
+	strcpy(str, "98993489");
+	val = atoi(str);
+	printf("String value = %s, Int value = %d\n", str, val);
+
+	strcpy(str, "charatertest12345");
+	val = atoi(str);
+	printf("String value = %s, Int value = %d\n", str, val);
+	return (0);
+}

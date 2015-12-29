@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   parametres.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/28 08:57:58 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/22 19:42:58 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/28 10:06:29 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
 
-void	ft_putnbr(int nbr)
+int	main(int nombredeparam_argc, char *table_argv[])
 {
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
-}
+	int k;
 
+	k = -1;
+	while (++k < nombredeparam_argc)
+	{
+		printf("\n%d %s", k, table_argv[k]);
+	}
+	return (15);
+}

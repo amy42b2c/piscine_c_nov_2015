@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/28 08:57:58 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/22 17:12:57 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/28 13:02:27 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-void	ft_putnbr(int nbr)
+char	*ft_strrev(char *str);
+
+int		main(int argc, char *argv[])
 {
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
-}
+	char	*myparam;
 
+	myparam = (char *)malloc(strlen(argv[1]) + 1);
+	strcpy(myparam, argv[1]);
+	if (argc != 2)
+		return (33);
+	printf("\nLe parametre avant %s", myparam);
+	ft_strrev(myparam);
+	printf("\nLe parametre apres %s\n", myparam);
+	return (0);
+}

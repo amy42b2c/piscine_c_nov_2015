@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   won't work w/out malloc!                             :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/28 08:57:58 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/22 17:12:57 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/28 17:44:52 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
 
-void	ft_putnbr(int nbr)
+char	*ft_strrev(char *str);
+
+int		main(void)
 {
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
-}
+//	char	ptr[0];
+	char	ptr[] = "abcdef";
 
+//	ptr[0] = "abcdef";
+	printf("\nThe string input is %s\n", ptr);
+	ft_strrev(ptr);
+	printf("\nThe new string is %s\n", ptr);
+	return (0);
+}

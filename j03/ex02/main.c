@@ -6,7 +6,7 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/17 18:46:34 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/22 15:41:23 by acresap          ###   ########.fr       */
+/*   Updated: 2015/12/28 09:24:59 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	ft_swap(int *a, int *b);
 
 int		main(void)
 {
-	int a;
-	int b;
+	int apple;
+	int boy;
 
-	a = 10;
-	b = 2;
-	ft_swap(&a, &b);
-	printf("a: %d\nb:%d \n", a, b);
+	apple = 10;
+	boy = 2;
+	ft_swap(&apple, &boy);
+	printf("apple: %d\nboy: %d \n", apple, boy);
 	return (0);
 }

@@ -5,28 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/28 08:57:58 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/16 10:20:03 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/29 13:15:56 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_putnbr(int nbr)
+void	ft_putchar(char c)
 {
-	if (nbr < 0)
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	while (str && *str)
 	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
+		ft_putchar(*str);
+		++str;
 	}
 }
 
+int		ft_putnbr(int nb)
+{
+	if (nb < -2147483647)
+	{
+		ft_putstr("-2147483648");
+		return (0);
+	}
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = nb * (-1);
+	}
+	if (nb > 10)
+		ft_putnbr(nb / 10);
+	ft_putchar((nb % 10) + '0');
+	return (0);
+}
