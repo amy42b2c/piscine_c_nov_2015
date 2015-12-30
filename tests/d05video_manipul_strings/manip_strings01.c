@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   manip_strings.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/30 13:01:51 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/29 17:39:07 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/29 17:47:15 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_putnbr(int nbr)
+void	ft_putchar(char c)
 {
-	if (nbr < 0)
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int	index;
+
+	index = 0;
+	while (str[index] != '\0')
 	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
+		ft_putchar(str[index]);
+		index++;
 	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+}
+
+int		main(void)
+{
+	char	str1[] = "Hello";
+
+	ft_putstr(str1);
+	ft_putchar('\n');
+	return (0);
 }

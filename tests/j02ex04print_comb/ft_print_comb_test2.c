@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/30 13:01:51 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/29 20:44:00 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/29 21:49:34 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_putnbr(int nbr)
+void	ft_print_comb(void)
 {
-	if (nbr < 0)
+	char a;
+	char b;
+
+	a = '0';
+	while (a <= '9')
 	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
+		b = a + 1;
+		while (b <= '9')
+		{
+			ft_putchar(a);
+			ft_putchar(b);
+			if (a != '8')
+			{
+				ft_putchar(',');
+				ft_putchar(' ');
+			}
+			b = b + 1;
+		}
+		a = a + 1;
 	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+	ft_putchar('\n');
 }

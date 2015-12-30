@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/30 13:01:51 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/30 09:59:50 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/30 12:37:12 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdio.h>
 
-void	ft_putnbr(int nbr)
+int	ft_iterative_factorial(int nb)
 {
-	if (nbr < 0)
+	int	f;
+
+	f = nb;
+	printf("fact test1: %d, nb test1: %d\n", f, nb);
+	if (nb == 0 || nb == 1)
+		return (1);
+	if (nb < 0 || nb >= 13)
+		return (0);
+	while (nb > 1)
 	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
+		nb = nb - 1;
+		f = f * nb;
+		printf("fact test2: %d, nb test2: %d\n", f, nb);
 	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+	return (f);
 }

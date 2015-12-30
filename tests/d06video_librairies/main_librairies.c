@@ -1,31 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   main_librairies.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/30 13:01:51 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/29 18:21:19 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/29 19:34:38 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putnbr(int nbr)
+int	main(void)
 {
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+	ft_putstr("Bonjour les gens\n");
+	return (0);
 }

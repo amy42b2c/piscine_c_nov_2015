@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/30 13:01:51 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/29 18:18:31 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/29 18:19:10 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_putnbr(int nbr)
+void	ft_putchar(char c)
 {
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nbr);
-	}
-	else if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
-	}
-	else
-	{
-		ft_putchar(nbr + '0');
-	}
+	write(1, &c, 1);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/21 10:42:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/30 13:01:51 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/30 11:49:45 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/30 12:39:58 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,27 @@ void	ft_putchar(char c);
 
 void	ft_putnbr(int nbr)
 {
-	if (nbr < 0)
+	int			tab[13];
+	int			count;
+	long long	nbr2;
+
+	if (nbr == 0)
+		ft_putchar('0');
+	nbr2 = nbr;
+	if (nbr2 < 0)
 	{
 		ft_putchar('-');
-		ft_putnbr(-nbr);
+		nbr2 = -nbr2;
 	}
-	else if (nbr > 9)
+	count = 0;
+	while (nbr2 != 0)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		tab[count] = nbr2 % -10;
+		count++;
+		nbr2 /= 10;
 	}
-	else
+	while (count--)
 	{
-		ft_putchar(nbr + '0');
+		ft_putchar(tab[count] + '0');
 	}
 }
