@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_iterative_factorial.c                         :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/30 11:10:17 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/06 19:21:05 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/30 13:55:42 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/04 13:27:18 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		ft_iterative_factorial(int nb);
-void	ft_putnbr(int nb);
-void	ft_putchar(char c);
-
-int		main(void)
+int	ft_recursive_factorial(int nb)
 {
-	int	result;
-
-	result = 0;
-	result = ft_iterative_factorial(7);
-	printf("The result is %d.\n", result);
-//	printf("The result of factorial "nb"is %d.\n", result);
-	return (0);
+	if (nb == 0 || nb == 1)
+		return (1);
+	if (nb < 0 || nb > 12)
+		return (0);
+	return (nb * ft_recursive_factorial(nb - 1));
 }

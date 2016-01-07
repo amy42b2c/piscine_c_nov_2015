@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_iterative_factorial.c                         :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/30 11:10:17 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/06 19:21:05 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/04 13:34:15 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/04 16:41:35 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		ft_iterative_factorial(int nb);
-void	ft_putnbr(int nb);
-void	ft_putchar(char c);
-
-int		main(void)
+int	ft_iterative_power(int nb, int power)
 {
+	int	counter;
 	int	result;
 
-	result = 0;
-	result = ft_iterative_factorial(7);
-	printf("The result is %d.\n", result);
-//	printf("The result of factorial "nb"is %d.\n", result);
-	return (0);
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	counter = 1;
+	result = 1;
+	while (counter <= power)
+	{
+		result = result * nb;
+		counter++;
+	}
+	return (result);
 }

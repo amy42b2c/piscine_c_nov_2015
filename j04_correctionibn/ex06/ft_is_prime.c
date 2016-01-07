@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_iterative_factorial.c                         :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/30 11:10:17 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/06 19:21:05 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/05 21:10:34 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/06 11:32:13 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		ft_iterative_factorial(int nb);
-void	ft_putnbr(int nb);
-void	ft_putchar(char c);
-
-int		main(void)
+int	ft_is_prime(int nb)
 {
-	int	result;
+	int	i;
 
-	result = 0;
-	result = ft_iterative_factorial(7);
-	printf("The result is %d.\n", result);
-//	printf("The result of factorial "nb"is %d.\n", result);
-	return (0);
+	if (nb <= 1)
+		return (0);
+	i = 2;
+	while (i < nb)
+	{
+		if (nb % i == 0)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }

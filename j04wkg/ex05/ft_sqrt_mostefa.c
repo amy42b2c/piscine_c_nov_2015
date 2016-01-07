@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt_mostefa.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 19:12:35 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/05 20:05:07 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/07 10:35:06 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/07 10:42:01 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_sqrt(int nb)
 {
-	write(1, &c, 1);
-}
+	int	counter;
 
-void	ft_putstr(char *str)
-{
-	while (*str)
-		ft_putchar(*str++);
+	counter = 0;
+	while (counter * counter < nb)
+		counter++;
+	if (counter * counter == nb)
+		return (counter);
+	return (0);
 }

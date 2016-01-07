@@ -6,7 +6,7 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/06 09:05:47 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/06 11:32:00 by acresap          ###   ########.fr       */
+/*   Updated: 2016/01/06 20:02:30 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 {
 	int	nbr;
 
-	nbr = ft_is_prime(76552363);
+	nbr = ft_is_prime(11);
 	if (nbr == 1)
 		printf("%d = NBR given is prime.\n", nbr);
 	else

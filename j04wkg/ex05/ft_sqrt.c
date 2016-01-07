@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/05 17:01:27 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/06 09:01:05 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/07 10:35:06 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/07 12:33:50 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int	guess;
-	int	sq;
+	int	given;
+	int	result;
 
-	guess = 0;
+	given = 0;
 	while (1)
 	{
-		sq = guess * guess;
-		if (sq == nb)
-			return (guess);
-		if (sq > nb / 2)
+		result = given * given;
+		if (result == nb)
+			return (given);
+		if (result > nb)
 			return (0);
-		guess++;
+		given++;
 	}
 	return (0);
 }

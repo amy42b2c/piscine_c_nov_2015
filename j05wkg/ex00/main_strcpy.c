@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_iterative_factorial.c                         :+:      :+:    :+:   */
+/*   main_strcpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/30 11:10:17 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/06 19:21:05 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/06 19:04:03 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/07 16:54:30 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_iterative_factorial(int nb);
-void	ft_putnbr(int nb);
-void	ft_putchar(char c);
+char	*ft_strcpy(char *dest, char *src);
 
 int		main(void)
 {
-	int	result;
+	char	dest2[100];
+	/*char	src2[];*/
 
-	result = 0;
-	result = ft_iterative_factorial(7);
-	printf("The result is %d.\n", result);
-//	printf("The result of factorial "nb"is %d.\n", result);
+	/*dest2 = src2["sdfd"];*/
+	ft_strcpy(dest2, "The best preparation for tomorrow is doing your \
+best today.");
+	printf("%s\n", dest2);
 	return (0);
 }
