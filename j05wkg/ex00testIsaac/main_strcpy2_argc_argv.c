@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   main_strcpy_argc_argv.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/06 19:02:05 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/08 21:13:52 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/08 15:59:35 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/08 18:00:34 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	int i;
+#include <stdio.h>
+#include <stdlib.h>
 
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+char	*ft_strcpy(char *dest, char *src);
+
+int		main(int argc, char *argv[])
+{
+	char	*val;
+	char	*dest2;
+
+	dest2 = NULL;
+	(void)argc;
+	val = ft_strcpy(dest2, argv[1]);
+	printf("Destination: %s\n", val);
+	printf("Source: %s\n", argv[1]);
+	return (0);
 }

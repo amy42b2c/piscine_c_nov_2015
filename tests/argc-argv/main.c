@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/06 19:02:05 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/08 21:13:52 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/08 20:04:47 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/08 21:09:47 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int	main(int argc, char **argv)
 {
-	int i;
-
-	i = 0;
-	while (src[i] != '\0')
+	ft_putstr("bonjour ");
+	if (argc == 2)
 	{
-		dest[i] = src[i];
-		i++;
+		ft_putstr(argv[1]);
 	}
-	dest[i] = '\0';
-	return (dest);
+	else
+	{
+		ft_putstr("usage: ./a.out toto\n");
+		return (0);
+	}
+	ft_putchar('\n');
+	return (0);
 }

@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   main_strncpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/06 19:02:05 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/08 21:13:52 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/08 10:05:32 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/08 11:40:10 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	int i;
+#include <stdio.h>
+#include <stdlib.h>
 
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
+
+int		main(void)
+{
+	char			*dest2;
+	unsigned int	n;
+
+	n = 10;
+	dest2 = (char *)malloc(sizeof(dest2) * (n + 1));
+	ft_strncpy(dest2, "The best prep for tomorrow: do your best today.", n);
+	printf("%s\n", dest2);
+	return (0);
 }
