@@ -12,6 +12,8 @@
 
 #include <stdio.h>
 
+/* To know how many chars printed on the bottom line of the pyramid. */
+
 void	sastantua(int size)
 {
 	int	i;

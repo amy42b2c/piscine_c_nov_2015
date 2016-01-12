@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Prints the first two pyramids correctly, without the door. */
+
 #include <stdio.h>
 #include <unistd.h>
 

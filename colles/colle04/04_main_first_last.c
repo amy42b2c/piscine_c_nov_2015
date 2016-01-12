@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* This is to tell me how many characters on the FIRST and the LAST lines
+   of each bloc. */
+
 #include <stdio.h>
 
 int		last_line(int numero_etage)

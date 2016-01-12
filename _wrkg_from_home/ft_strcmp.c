@@ -1,35 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_sastantua.c                                   :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/11 11:25:30 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/11 11:33:55 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/12 22:42:42 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/12 23:09:41 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-/* To tell me how many lines in the sastantua pyramid  */
-
-void	sastantua(int size)
+int ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-	int	taille;
-
-	i = 0;
-	taille = 0;
-	while (i < size)
-	{
-		taille = taille + 3 + i;
-		i++;
-	}
-	printf("taille %d\n", taille);
-}
-
-int	main(void)
-{
-	sastantua(6);
+    
 }

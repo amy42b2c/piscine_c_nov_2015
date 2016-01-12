@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Prints the first two pyramids, but spaces decalees... */
+
 #include <stdio.h>
 #include <unistd.h>
 
