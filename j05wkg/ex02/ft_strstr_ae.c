@@ -1,58 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr_ae.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/08 18:55:27 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/14 18:44:33 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/14 14:26:51 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/14 14:35:16 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		find_next(char *b, char *s)
-{
-	while ((*b != '\0') || (*s != '\0'))
-	{
-		if (*b == *s)
-		{
-			b++;
-			s++;
-		}
-		else
-			break ;
-	}
-	if (*s == '\0')
-		return (0);
-	else
-		return (-1);
-}
-
 char	*ft_strstr(char *str, char *to_find)
 {
-	int		found;
-	char	*c;
-	char	*d;
+	int i;
+	int j;
 
-	c = str;
-	d = to_find;
-	if (str == 0)
-		return (0);
-	if (*to_find == '\0')
+	i = 0;
+	if (to_find[0] == '\0')		/* if "to_find[0]" is at the end of table? */
 		return (str);
-	while (*str != '\0')
+	while (str[i] != '\0')
 	{
-		if (*str == *to_find)
+		if (str[i] == to_find[0])
 		{
-			found = (find_next(str, to_find));
-			{
-				if (found == 0)
-					return (str);
-			}
+			j = i;
+			while (to_find[j - i] == str[j])
+				j++;
+			if (to_find[j - i] == '\0' || to_find[j - i - 1] == '\0')
+				return (&str[i]);
 		}
-		str++;
+		i++;
 	}
 	return (0);
 }

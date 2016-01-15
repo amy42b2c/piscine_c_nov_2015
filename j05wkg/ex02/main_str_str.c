@@ -6,7 +6,7 @@
 /*   By: ckramer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/16 11:04:00 by ckramer           #+#    #+#             */
-/*   Updated: 2015/12/30 09:49:27 by ckramer          ###   ########.fr       */
+/*   Updated: 2016/01/14 14:31:42 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		main(int argc, char **argv)
 	{
 		printf("In the string [%s] find [%s]\n", body, part);
 		printf("In the string ft_strstr  [%s] \n", ft_strstr(body, part));
-		printf("In the string find strstr[%s] \n", strstr(body, part));
+		printf("Found in the string (find) [%s] \n", strstr(body, part));
 	}
 	return (0);
 }
