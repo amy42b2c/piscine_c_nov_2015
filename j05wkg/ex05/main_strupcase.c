@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testpointers.c                                     :+:      :+:    :+:   */
+/*   main_strupcase.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/14 18:13:18 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/18 13:37:43 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/20 15:47:47 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/20 21:42:56 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* What will each of the following steps print? */
-
 #include <stdio.h>
 
-void	ft_test(int a)
-{
-	printf("etape 2 %d\n", a);
-	a = 42;
-	printf("etape 3 %d\n", a);
-}
+char	*ft_strupcase(char *str);
 
 int		main(void)
 {
-	int a;
+//	char	string[20];
+	//char	*s;
 
-	a = 0;
-	printf("etape 1 %d\n", a);
-	ft_test(a);
-	printf("etape 4 %d\n", a);
+//	*string = "we are the champions";
+//	char	string[] = "we are the champions";	/* this works for reserving memory */
+	char	string[] = "we are the -champions, but [dfsf]{*&^%$# not.";
+	printf("My string: [%s]\n", ft_strupcase(string));
 	return (0);
 }
