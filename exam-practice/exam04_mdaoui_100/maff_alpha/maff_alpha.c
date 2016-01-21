@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strlowcase.c                                  :+:      :+:    :+:   */
+/*   maff_alpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/20 15:47:47 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/20 22:21:34 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/19 10:36:40 by exam              #+#    #+#             */
+/*   Updated: 2016/01/19 10:47:10 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strlowcase(char *str);
-
-int		main(void)
+void	ft_aff(char c)
 {
-	char	string[] = "WE ARE THE -CHAMPIONS, BUT [dFsf]{*&^%$# NOT.";
-	printf("My string: [%s]\n", ft_strlowcase(string));
+	write(1, &c, 1);
+}
+
+int	main(void)
+{
+	char	alpha;
+
+	alpha = 'a';
+	while (alpha <= 'z')
+	{
+		if (alpha % 2 == 0)
+			ft_aff(alpha - 32);
+		else
+			ft_aff(alpha);
+		alpha++;
+	}
+	ft_aff('\n');
 	return (0);
 }

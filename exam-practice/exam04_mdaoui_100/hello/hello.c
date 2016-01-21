@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strlowcase.c                                  :+:      :+:    :+:   */
+/*   hello.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/20 15:47:47 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/20 22:21:34 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/19 10:17:37 by exam              #+#    #+#             */
+/*   Updated: 2016/01/19 10:30:45 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-char	*ft_strlowcase(char *str);
-
-int		main(void)
+int	main(void)
 {
-	char	string[] = "WE ARE THE -CHAMPIONS, BUT [dFsf]{*&^%$# NOT.";
-	printf("My string: [%s]\n", ft_strlowcase(string));
+	char 	str[] = "Hello World!";
+	int		i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	write(1, "\n", 1);
 	return (0);
 }

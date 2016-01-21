@@ -1,0 +1,51 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r8p2.42.fr
+Darwin 15.2.0 x86_64
+$> date
+Tue Jan 19 10:33:09 CET 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.2.0
+Thread model: posix
+$> clang --version
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.2.0
+Thread model: posix
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-formation-exam04/exam_20160119/mdaoui
+
+= Git history ==================================================================
+$> git -C /var/folders/jz/_psjpwrj3fn659p38fnd_ddc0000gq/T/tmp2e7dl6/user log --pretty='%H - %an, %ad : %s'
+51e9cc0b8765903a4ec37de5cb5ea3f713608bf7 - Exam 42, Tue Jan 19 10:32:38 2016 +0100 : hello
+1932ac00db5d99522638c6d68a1c6b43d2943644 - Exam 42, Tue Jan 19 10:14:15 2016 +0100 : substr_sh
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/jz/_psjpwrj3fn659p38fnd_ddc0000gq/T/tmp2e7dl6/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  421 Jan 19 10:33 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jan 19 10:33 hello
+drwxr-xr-x  3 deepthought  deepthought  102 Jan 19 10:33 substr_sh
+
+/var/folders/jz/_psjpwrj3fn659p38fnd_ddc0000gq/T/tmp2e7dl6/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1075 Jan 19 10:33 hello.c
+
+/var/folders/jz/_psjpwrj3fn659p38fnd_ddc0000gq/T/tmp2e7dl6/user/substr_sh:
+total 8
+-rwxr-xr-x  1 deepthought  deepthought  33 Jan 19 10:33 substr.sh
+ 
+= hello ========================================================================
+$> clang -Wextra -Wall -Werror hello.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./ydvdryrtcklgz8yfjvcdmu75 test1.prm
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

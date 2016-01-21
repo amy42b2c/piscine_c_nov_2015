@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strlowcase.c                                  :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/20 15:47:47 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/20 22:21:34 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/19 10:51:17 by exam              #+#    #+#             */
+/*   Updated: 2016/01/19 10:58:17 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strlowcase(char *str);
-
-int		main(void)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	string[] = "WE ARE THE -CHAMPIONS, BUT [dFsf]{*&^%$# NOT.";
-	printf("My string: [%s]\n", ft_strlowcase(string));
-	return (0);
+	while (*s1 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }

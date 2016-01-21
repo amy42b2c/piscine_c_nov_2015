@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strlowcase.c                                  :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/20 15:47:47 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/20 22:21:34 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/21 12:36:04 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/21 18:36:56 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strlowcase(char *str);
-
-int		main(void)
+char	*ft_strcapitalize(char *str)
 {
-	char	string[] = "WE ARE THE -CHAMPIONS, BUT [dFsf]{*&^%$# NOT.";
-	printf("My string: [%s]\n", ft_strlowcase(string));
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == ' ')
+			i++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			 str[i] = str[i] - 32;
+		}
+		i++;
+	}
+	return (str);
 }
