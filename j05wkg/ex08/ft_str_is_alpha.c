@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strcapitalize.c                               :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/21 14:27:49 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/22 14:43:26 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/21 20:27:00 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/22 12:25:07 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcapitalize(char *str);
-
-int     main(void)
+int	ft_str_is_alpha(char *str)
 {
-	char    string[] = "we are the -chaMpions, but [dfsf]{*&^%$# not.";
-	printf("My string: [%s]\n", ft_strcapitalize(string));
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')	
+	{
+		if ((str[i] >= 'a' && str[i] <= 'z') ||
+				(str[i] >= 'A' && str[i] <= 'Z'))
+			i++;
+		else
+			return (0);
+	}
+	return (1);
 }

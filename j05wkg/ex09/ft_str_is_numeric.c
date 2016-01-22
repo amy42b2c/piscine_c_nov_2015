@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strcapitalize.c                               :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/21 14:27:49 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/22 14:43:26 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/22 14:40:09 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/22 14:57:32 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strcapitalize(char *str);
-
-int     main(void)
+int ft_str_is_numeric(char *str)
 {
-	char    string[] = "we are the -chaMpions, but [dfsf]{*&^%$# not.";
-	printf("My string: [%s]\n", ft_strcapitalize(string));
-	return (0);
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= '0') && (str[i] <= '9'))
+			i++;
+		else
+			return (0);		/* if found char other than number */
+	}
+		return (1);			/* if chaine vide or all numbers */
 }
