@@ -1,0 +1,3 @@
+:set nu
+:syn on
+:set colorcolumn=80
