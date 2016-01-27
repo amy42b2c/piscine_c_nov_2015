@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   match_louis.c                                      :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/26 19:17:35 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/26 20:19:38 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/17 17:21:10 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/21 14:27:18 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
+void	ft_putnbr(int nb);
 
-void	ft_putchar(char c)
+int	main(void)
 {
-	write(1, &c, 1);
-}
-
-int		match(char *s1, char *s2)
-{
-	int i;
-
-	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] != '\0'))
-	{
-		ft_putchar(s1[i]);
-		ft_putchar(s2[i]);
-		i++;
-	}
+	ft_putnbr(58965852);
 	ft_putchar('\n');
-	if (s1[i] == '\0')
-		return (1);
+	ft_putnbr(-253584);
+	ft_putchar('\n');
+	ft_putnbr(-2147483648);
+	ft_putchar('\n');
+	ft_putnbr(2147483647);
+	ft_putchar('\n');
+	ft_putnbr(0);
+	ft_putchar('\n');
+	ft_putnbr(+214);
+	ft_putchar('\n');
 	return (0);
 }
