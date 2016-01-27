@@ -6,7 +6,7 @@
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/21 14:27:49 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/22 14:43:26 by acresap          ###   ########.fr       */
+/*   Updated: 2016/01/27 15:56:50 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strcapitalize(char *str);
 
-int     main(void)
+int		main(void)
 {
-	char    string[] = "we are the -chaMpions, but [dfsf]{*&^%$# not.";
+	char	string[] = "we are the -chaMpions, but [dfsf]{*&^%$# not.";
 	printf("My string: [%s]\n", ft_strcapitalize(string));
 	return (0);
 }
