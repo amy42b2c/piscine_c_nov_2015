@@ -48,4 +48,5 @@ int	main(void)
 	printf("Retour str4 ma ft_strcmp:   [%d].\n", ft_strcmp(string1, string4));
 	printf("Retour la valeur de strcmp: [%d].\n", strcmp(string1, string4));
 	printf("\n");
+	return (0);
 }

@@ -3,44 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mleblond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/16 10:20:03 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/18 16:58:22 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/02 20:16:19 by mleblond          #+#    #+#             */
+/*   Updated: 2015/12/08 11:54:21 by mleblond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
-{
-	while (str && *str)
-	{
-		ft_putchar(*str);
-		++str;
-	}
-}
+int		ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
-	if (nb == -2147483648 )
-	{
-		ft_putstr("-2147483648");
-		return ;
-	}
-	/*
-	if (nb < -2147483648 || nb > +2147483647)
-	{
-		ft_putstr("overflow: -2147483648");
-		return ;
-	}
-	*/
+	char	tab[12];
+	int		pos;
+	int		num;
+
+	tab[0] = '0';
+	num = 0;
+	pos = 0;
+	if (nb == 0)
+		pos = 1;
 	if (nb < 0)
-	{
 		ft_putchar('-');
-		nb = nb * (-1);
+	else
+		nb = -nb;
+	while (nb < 0)
+	{
+		num = nb % 10;
+		tab[pos] = -num + '0';
+		nb = nb / 10;
+		pos++;
 	}
-	if (nb > 10)
-		ft_putnbr(nb / 10);
-	ft_putchar((nb % 10) + '0');
+	pos--;
+	while (pos >= 0)
+		ft_putchar(tab[pos--]);
 }
