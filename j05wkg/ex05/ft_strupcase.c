@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testpointers.c                                     :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/14 18:13:18 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/18 13:37:43 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/20 15:47:10 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/20 20:25:21 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* What will each of the following steps print? */
-
-#include <stdio.h>
-
-void	ft_test(int a)
+char	*ft_strupcase(char *str)
 {
-	printf("etape 2 %d\n", a);
-	a = 42;
-	printf("etape 3 %d\n", a);
-}
+	int	i;
 
-int		main(void)
-{
-	int a;
-
-	a = 0;
-	printf("etape 1 %d\n", a);
-	ft_test(a);
-	printf("etape 4 %d\n", a);
-	return (0);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 97 && str[i] <= 122)
+			str[i] = str[i] - 32;
+		i++;
+	}
+	return (str);
 }

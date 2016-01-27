@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testpointers.c                                     :+:      :+:    :+:   */
+/*   ft_countdown.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/14 18:13:18 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/18 13:37:43 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/26 12:43:26 by exam              #+#    #+#             */
+/*   Updated: 2016/01/26 12:57:23 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* What will each of the following steps print? */
+#include <unistd.h>
 
-#include <stdio.h>
-
-void	ft_test(int a)
+void	ft_putchar(char c)
 {
-	printf("etape 2 %d\n", a);
-	a = 42;
-	printf("etape 3 %d\n", a);
+	write(1, &c, 1);
+}
+
+void	ft_countdown(void)
+{
+	char	i;
+
+	i = '9';
+	while (i >= '0')
+	{
+		ft_putchar(i);
+		i--;
+	}
+	ft_putchar('\n');
 }
 
 int		main(void)
 {
-	int a;
-
-	a = 0;
-	printf("etape 1 %d\n", a);
-	ft_test(a);
-	printf("etape 4 %d\n", a);
+	ft_countdown();
 	return (0);
 }

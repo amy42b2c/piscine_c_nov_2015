@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testpointers.c                                     :+:      :+:    :+:   */
+/*   main_strcapitalize.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/14 18:13:18 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/18 13:37:43 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/21 14:27:49 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/27 15:56:50 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* What will each of the following steps print? */
-
 #include <stdio.h>
 
-void	ft_test(int a)
-{
-	printf("etape 2 %d\n", a);
-	a = 42;
-	printf("etape 3 %d\n", a);
-}
+char	*ft_strcapitalize(char *str);
 
 int		main(void)
 {
-	int a;
-
-	a = 0;
-	printf("etape 1 %d\n", a);
-	ft_test(a);
-	printf("etape 4 %d\n", a);
+	char	string[] = "we are the -chaMpions, but [dfsf]{*&^%$# not.";
+	printf("My string: [%s]\n", ft_strcapitalize(string));
 	return (0);
 }

@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testpointers.c                                     :+:      :+:    :+:   */
+/*   match_louis.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/14 18:13:18 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/18 13:37:43 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/26 19:17:35 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/26 20:19:38 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* What will each of the following steps print? */
+#include <unistd.h>
 
-#include <stdio.h>
-
-void	ft_test(int a)
+void	ft_putchar(char c)
 {
-	printf("etape 2 %d\n", a);
-	a = 42;
-	printf("etape 3 %d\n", a);
+	write(1, &c, 1);
 }
 
-int		main(void)
+int		match(char *s1, char *s2)
 {
-	int a;
+	int i;
 
-	a = 0;
-	printf("etape 1 %d\n", a);
-	ft_test(a);
-	printf("etape 4 %d\n", a);
+	i = 0;
+	while ((s1[i] == s2[i]) && (s1[i] != '\0'))
+	{
+		ft_putchar(s1[i]);
+		ft_putchar(s2[i]);
+		i++;
+	}
+	ft_putchar('\n');
+	if (s1[i] == '\0')
+		return (1);
 	return (0);
 }

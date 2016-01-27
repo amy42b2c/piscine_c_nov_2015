@@ -1,0 +1,57 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r8p17.42.fr
+Darwin 15.2.0 x86_64
+$> date
+Tue Jan 19 10:49:21 CET 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.2.0
+Thread model: posix
+$> clang --version
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.2.0
+Thread model: posix
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-formation-exam04/exam_20160119/mdaoui
+
+= Git history ==================================================================
+$> git -C /var/folders/71/f72bx2vj2vgfkj20y2jt8qv40000gq/T/tmpaLJMmK/user log --pretty='%H - %an, %ad : %s'
+0b7a1e07b78ffd1c695ead39fb3c16f1bd1c18c3 - Exam 42, Tue Jan 19 10:48:58 2016 +0100 : maff_alpha
+51e9cc0b8765903a4ec37de5cb5ea3f713608bf7 - Exam 42, Tue Jan 19 10:32:38 2016 +0100 : hello
+1932ac00db5d99522638c6d68a1c6b43d2943644 - Exam 42, Tue Jan 19 10:14:15 2016 +0100 : substr_sh
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/71/f72bx2vj2vgfkj20y2jt8qv40000gq/T/tmpaLJMmK/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  664 Jan 19 10:49 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jan 19 10:49 hello
+drwxr-xr-x  3 deepthought  deepthought  102 Jan 19 10:49 maff_alpha
+drwxr-xr-x  3 deepthought  deepthought  102 Jan 19 10:49 substr_sh
+
+/var/folders/71/f72bx2vj2vgfkj20y2jt8qv40000gq/T/tmpaLJMmK/user/hello:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1075 Jan 19 10:49 hello.c
+
+/var/folders/71/f72bx2vj2vgfkj20y2jt8qv40000gq/T/tmpaLJMmK/user/maff_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1140 Jan 19 10:49 maff_alpha.c
+
+/var/folders/71/f72bx2vj2vgfkj20y2jt8qv40000gq/T/tmpaLJMmK/user/substr_sh:
+total 8
+-rwxr-xr-x  1 deepthought  deepthought  33 Jan 19 10:49 substr.sh
+ 
+= maff_alpha ===================================================================
+$> clang -Wextra -Wall -Werror maff_alpha.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./90pa8jtkfuay0hgdla4fy34t test1.prm
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

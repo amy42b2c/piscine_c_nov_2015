@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testpointers.c                                     :+:      :+:    :+:   */
+/*   maff_alpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/14 18:13:18 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/18 13:37:43 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/19 10:36:40 by exam              #+#    #+#             */
+/*   Updated: 2016/01/19 10:47:10 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* What will each of the following steps print? */
+#include <unistd.h>
 
-#include <stdio.h>
-
-void	ft_test(int a)
+void	ft_aff(char c)
 {
-	printf("etape 2 %d\n", a);
-	a = 42;
-	printf("etape 3 %d\n", a);
+	write(1, &c, 1);
 }
 
-int		main(void)
+int	main(void)
 {
-	int a;
+	char	alpha;
 
-	a = 0;
-	printf("etape 1 %d\n", a);
-	ft_test(a);
-	printf("etape 4 %d\n", a);
+	alpha = 'a';
+	while (alpha <= 'z')
+	{
+		if (alpha % 2 == 0)
+			ft_aff(alpha - 32);
+		else
+			ft_aff(alpha);
+		alpha++;
+	}
+	ft_aff('\n');
 	return (0);
 }

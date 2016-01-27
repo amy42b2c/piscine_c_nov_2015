@@ -5,15 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/15 08:59:04 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/20 15:33:11 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/23 12:12:25 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/23 14:09:58 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strcmp(char *s1, char *s2);
+//int	ft_strcmp(char *s1, char *s2);
+int	match(char *s1, char *s2);
 
 int	main(void)
 {
@@ -22,10 +23,10 @@ int	main(void)
 	char	*string3;
 	char	*string4;
 
-	string1 = "My example sentence is really lame.";
-	string2 = "My example sentence is really lame.";
-	string3 = "My example sentence is really lame";
-	string4 = "My exemple sentence is really lame.";
+	string1 = "main.c";
+	string2 = "main.c";		/* same as string1 */
+	string3 = "*.c";		/* using *         */
+	string4 = "m*in.c";
 
 	printf("\n");
 	/* print the strings */
@@ -36,17 +37,16 @@ int	main(void)
 	printf("\n");
 
 	/* Test of my ft_strcmp function to compare to the real one: */
-	printf("Retour str2 ma ft_strcmp:   [%d].\n", ft_strcmp(string1, string2));
+	printf("Retour de match str2:       [%d].\n", match(string1, string2));
 	/* Test the REAL function "strcmp" to understand what it returns: */
 	printf("Retour la valeur de strcmp: [%d].\n", strcmp(string1, string2));
 	printf("\n");
-	
-	printf("Retour str3 ma ft_strcmp:   [%d].\n", ft_strcmp(string1, string3));
+
+	printf("Retour match str3:          [%d].\n", match(string1, string3));
 	printf("Retour la valeur de strcmp: [%d].\n", strcmp(string1, string3));
 	printf("\n");
-	
-	printf("Retour str4 ma ft_strcmp:   [%d].\n", ft_strcmp(string1, string4));
+
+	printf("Retour match str4:          [%d].\n", match(string1, string4));
 	printf("Retour la valeur de strcmp: [%d].\n", strcmp(string1, string4));
 	printf("\n");
-	return (0);
 }

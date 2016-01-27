@@ -1,0 +1,54 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r13p10.42.fr
+Darwin 15.2.0 x86_64
+$> date
+Tue Jan 19 10:14:36 CET 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.2.0
+Thread model: posix
+$> clang --version
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.2.0
+Thread model: posix
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-formation-exam04/exam_20160119/mdaoui
+
+= Git history ==================================================================
+$> git -C /var/folders/l0/hww2kst94zb9_b0_v7fh633m0000gq/T/tmpEeCx1E/user log --pretty='%H - %an, %ad : %s'
+1932ac00db5d99522638c6d68a1c6b43d2943644 - Exam 42, Tue Jan 19 10:14:15 2016 +0100 : substr_sh
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/l0/hww2kst94zb9_b0_v7fh633m0000gq/T/tmpEeCx1E/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  200 Jan 19 10:14 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Jan 19 10:14 substr_sh
+
+/var/folders/l0/hww2kst94zb9_b0_v7fh633m0000gq/T/tmpEeCx1E/user/substr_sh:
+total 8
+-rwxr-xr-x  1 deepthought  deepthought  33 Jan 19 10:14 substr.sh
+ 
+= substr_sh ====================================================================
+Testing with FT_LINE='Les patrons du staff ne sentent pas toujours tres bon.'
+$> diff -U 3 user_output ref_output | cat -e
+
+Diff OK :D
+Testing with FT_LINE='zaz est grand, zaz est beau, zaz sent bon le sable chaud, mais zaz n'est pas tres malin'
+$> diff -U 3 user_output ref_output | cat -e
+
+Diff OK :D
+Testing with FT_LINE='sifflet en travaillant'
+$> diff -U 3 user_output ref_output | cat -e
+
+Diff OK :D
+Testing with FT_LINE='the game'
+$> diff -U 3 user_output ref_output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

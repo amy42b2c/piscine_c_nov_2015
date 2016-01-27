@@ -1,0 +1,3 @@
+PROMPT=$'%m:%~>'
+alias ls='ls -G'
+export PATH=$PATH:$HOME/bin

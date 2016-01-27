@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testpointers.c                                     :+:      :+:    :+:   */
+/*   main_str_is_numeric.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/14 18:13:18 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/18 13:37:43 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/22 14:43:59 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/22 14:58:26 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* What will each of the following steps print? */
-
 #include <stdio.h>
 
-void	ft_test(int a)
-{
-	printf("etape 2 %d\n", a);
-	a = 42;
-	printf("etape 3 %d\n", a);
-}
+int	ft_str_is_numeric(char *str);
 
-int		main(void)
+int	main(void)
 {
-	int a;
-
-	a = 0;
-	printf("etape 1 %d\n", a);
-	ft_test(a);
-	printf("etape 4 %d\n", a);
+	char	string1[] = "123456789";
+	printf("str is numeric:         [%d]\n", ft_str_is_numeric(string1));
+	char	string2[] = "123456789 [dFsf]{*&^%$# NOT.";
+	printf("str has sp characters:  [%d]\n", ft_str_is_numeric(string2));
+	char	string3[] = "abc123456789defg";
+	printf("alpha-numeric str:      [%d]\n", ft_str_is_numeric(string3));
 	return (0);
 }
