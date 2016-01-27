@@ -31,4 +31,5 @@ int	main(void)
 	char	string3[] = "Ineedtowrit5eonlylet9tersforittowork";
 	printf("spec. chars = 0 [%d]\n", ft_str_is_alpha(string3));
 	ft_putchar('\n');
+	return (0);
 }

@@ -23,11 +23,18 @@ void	ft_putstr(char *str)
 
 void	ft_putnbr(int nb)
 {
-	if (nb < -2147483647)
+	if (nb == -2147483648 )
 	{
 		ft_putstr("-2147483648");
 		return ;
 	}
+	/*
+	if (nb < -2147483648 || nb > +2147483647)
+	{
+		ft_putstr("overflow: -2147483648");
+		return ;
+	}
+	*/
 	if (nb < 0)
 	{
 		ft_putchar('-');

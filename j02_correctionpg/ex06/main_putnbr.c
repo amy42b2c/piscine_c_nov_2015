@@ -19,6 +19,8 @@ int	main(void)
 	ft_putchar('\n');
 	ft_putnbr(-253584);
 	ft_putchar('\n');
+//	ft_putnbr(-2147483650);
+//	ft_putchar('\n');
 	ft_putnbr(-2147483648);
 	ft_putchar('\n');
 	ft_putnbr(2147483647);
