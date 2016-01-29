@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/27 18:07:40 by acresap           #+#    #+#             */
-/*   Updated: 2016/01/28 14:41:25 by acresap          ###   ########.fr       */
+/*   Created: 2016/01/28 09:11:21 by acresap           #+#    #+#             */
+/*   Updated: 2016/01/28 14:41:53 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
-	if (*str == '\0')
-		return (1);
+	char	*d;
+
+	d = dest;
 	while (*str != '\0')
-	{
-		if (*str >= 32 && *str <= 126)
-	//	if (*str >= ' ' && *str <= '~')
-			str++;
-		else
-			return (0);
-	}
-	return (1);
+		{
+			*d = *src;
+			d = d + 1;
+			src = src + 1;
+		}
+	*d = '\0';
+	return (dest);
 }
