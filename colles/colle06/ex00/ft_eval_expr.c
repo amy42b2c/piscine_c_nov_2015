@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IsOperand.c                                        :+:      :+:    :+:   */
+/*   ft_eval_expr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/01 10:35:58 by acresap           #+#    #+#             */
-/*   Updated: 2016/02/01 14:39:40 by acresap          ###   ########.fr       */
+/*   Created: 2016/02/01 15:25:35 by acresap           #+#    #+#             */
+/*   Updated: 2016/02/01 18:15:35 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+char	ft_infix_to_postfix(char *q);
+void    pop(Stack *S);
+void    push(Stack *S,int element);
 
-int	IsOperand(char c)
+int	ft_eval_expr(char *str)
 {
-	if (c > '0' && c < '9')
-		return (1);
-	return (0);
-}
+	char	*s;
 
-int	main(void)
-{
-	char	c;
-
-	c = 7;
-	printf("number returned: %d\n", IsOperand(c));
-	//printf("number returned: %d\n", c);
+	*s = NULL;
+	while (str != '\0')
+	{
+		if (ft_is_operand(1))
+			push(S, q);
+	}
+	if (ft_is_operand(1))
+	{
+		a = pop(S);
+		b = pop(S);
+		c = b op a;
+		push(S, element);
+	}
+	return (pop(S));
 }

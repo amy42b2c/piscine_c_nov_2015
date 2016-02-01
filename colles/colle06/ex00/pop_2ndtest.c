@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IsOperand.c                                        :+:      :+:    :+:   */
+/*   pop_2ndtest.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/01 10:35:58 by acresap           #+#    #+#             */
-/*   Updated: 2016/02/01 14:39:40 by acresap          ###   ########.fr       */
+/*   Created: 2016/02/01 15:50:10 by acresap           #+#    #+#             */
+/*   Updated: 2016/02/01 16:32:55 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	IsOperand(char c)
+/*PUSH FUNCTION*/
+void	push(int stack[], int item)
 {
-	if (c > '0' && c < '9')
-		return (1);
-	return (0);
+	if (top == (MAX - 1))
+	status = 0;
+    else
+    {
+		status = 1;
+		++top;
+		stack[top] = item;
+    }
 }
 
-int	main(void)
+/*POP FUNCTION*/
+int		pop(int stack[])
 {
-	char	c;
-
-	c = 7;
-	printf("number returned: %d\n", IsOperand(c));
-	//printf("number returned: %d\n", c);
+	int ret;
+	if (top == -1)
+    {
+		ret = 0;
+		status = 0;
+	}
+    else
+    {
+		status = 1;
+		ret = stack[top];
+		--top;
+    }
+	return ret;
 }

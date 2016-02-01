@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IsOperand.c                                        :+:      :+:    :+:   */
+/*   precedence.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/01 10:35:58 by acresap           #+#    #+#             */
-/*   Updated: 2016/02/01 14:39:40 by acresap          ###   ########.fr       */
+/*   Created: 2016/02/01 14:42:19 by acresap           #+#    #+#             */
+/*   Updated: 2016/02/01 15:15:07 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	IsOperand(char c)
+int	precedence(char c)
 {
-	if (c > '0' && c < '9')
+	if (c == '-')
 		return (1);
+	if (c == '+')
+		return (2);
+	if (c == '/')
+		return (3);
+	if (c == '*')
+		return (4);
+	if (c == '%')
+		return (5);
 	return (0);
-}
-
-int	main(void)
-{
-	char	c;
-
-	c = 7;
-	printf("number returned: %d\n", IsOperand(c));
-	//printf("number returned: %d\n", c);
 }
