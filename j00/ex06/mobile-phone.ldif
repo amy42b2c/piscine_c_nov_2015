@@ -1,7 +1,0 @@
-dn: uid=acresap,ou=2015_poleemploi,ou=2015,ou=paris,ou=people,dc=42,dc=fr
-changetype: modify
-delete: mail
-mail: amy.cresap@gmail.com
-mail: amyguita@gmail.com
-add: mail
-mail: amy42b2c@gmail.com
