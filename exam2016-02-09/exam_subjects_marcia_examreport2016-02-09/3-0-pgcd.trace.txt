@@ -1,0 +1,62 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r5p6.42.fr
+Darwin 15.3.0 x86_64
+$> date
+Tue Feb  9 11:23:10 CET 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.3.0
+Thread model: posix
+$> clang --version
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.3.0
+Thread model: posix
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-formation-c-exam-formation/exam_20160209/mcostaes
+
+= Git history ==================================================================
+$> git -C /var/folders/21/bf97wnw93490yrh0k_0d4_n00000gq/T/tmpismQ26/user log --pretty='%H - %an, %ad : %s'
+948a3e17b9e3fbd3334d9b33412525b920af726f - Exam 42, Tue Feb 9 11:22:32 2016 +0100 : ex04
+66b894159ee85f0b4938d262066185924655c8d3 - Exam 42, Tue Feb 9 11:20:28 2016 +0100 : ex04
+e1ade79e9c95b70c218a9eff84828a8d27b5767c - Exam 42, Tue Feb 9 11:01:04 2016 +0100 : ex03
+5df51fe98a30a7fee0e419842070dbc7ec9e000b - Exam 42, Tue Feb 9 10:36:40 2016 +0100 : ex02
+8bf90385c9908c5765c4a092fc19dee8b6565b2e - Exam 42, Tue Feb 9 10:11:12 2016 +0100 : premier exercice
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/21/bf97wnw93490yrh0k_0d4_n00000gq/T/tmpismQ26/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1171 Feb  9 11:23 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 11:23 aff_last_param
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 11:23 first_word
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 11:23 ft_strdup
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 11:23 pgcd
+
+/var/folders/21/bf97wnw93490yrh0k_0d4_n00000gq/T/tmpismQ26/user/aff_last_param:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1123 Feb  9 11:23 aff_last_param.c
+
+/var/folders/21/bf97wnw93490yrh0k_0d4_n00000gq/T/tmpismQ26/user/first_word:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1164 Feb  9 11:23 first_word.c
+
+/var/folders/21/bf97wnw93490yrh0k_0d4_n00000gq/T/tmpismQ26/user/ft_strdup:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1233 Feb  9 11:23 ft_strdup.c
+
+/var/folders/21/bf97wnw93490yrh0k_0d4_n00000gq/T/tmpismQ26/user/pgcd:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1312 Feb  9 11:23 pgcd.c
+ 
+= pgcd =========================================================================
+$> clang -Wextra -Wall -Werror pgcd.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./k28z7v8x1642va5ktxtwhtgr "920556" "1980488"
+Command './k28z7v8x1642va5ktxtwhtgr "920556" "1980488"' got killed by a Segmentation fault (Signal -11)
+Grade: 0
+
+= Final grade: 0 ===============================================================
