@@ -6,7 +6,7 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/09 11:50:32 by exam              #+#    #+#             */
-/*   Updated: 2016/02/09 19:04:46 by acresap          ###   ########.fr       */
+/*   Updated: 2016/02/10 10:44:01 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,12 @@ void	rotone(char *str)
 	letter = str;
 	while (*letter != '\0')
 	{
-		if ((*letter >= 'a' && *letter <= 'z') ||
-				(*letter >= 'A' && *letter <= 'Z'))
+		if ((*letter >= 'a' && *letter <= 'm') ||
+				(*letter >= 'A' && *letter <= 'M'))
 			*letter = *letter + 13;
 		else if ((*letter >= 'n' && *letter <= 'z') ||
 					(*letter >= 'N' && *letter <= 'Z'))
 			*letter = *letter - 13;
-		ft_putchar(*letter);
-		letter++;
-	}
-	if (*letter != '\0')
-	{
 		ft_putchar(*letter);
 		letter++;
 	}

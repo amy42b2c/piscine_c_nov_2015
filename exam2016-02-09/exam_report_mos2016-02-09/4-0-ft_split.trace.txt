@@ -1,0 +1,96 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r8p16.42.fr
+Darwin 15.3.0 x86_64
+$> date
+Tue Feb  9 13:59:27 CET 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.3.0
+Thread model: posix
+$> clang --version
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.3.0
+Thread model: posix
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-formation-c-exam-formation/exam_20160209/mdaoui
+
+= Git history ==================================================================
+$> git -C /var/folders/q8/1s8v63095kj234b48tln9_hh0000gq/T/tmp817hD2/user log --pretty='%H - %an, %ad : %s'
+78828ac571ec4fe626e9417420bf91727d072a14 - Exam 42, Tue Feb 9 13:59:14 2016 +0100 : ft_split non fini
+34f6b25981feddfe5cceda22f6ea02277a6cec19 - Exam 42, Tue Feb 9 13:12:05 2016 +0100 : epur_str.c
+9b4430756ba29e7966467fa3b738610aa2e7d743 - Exam 42, Tue Feb 9 11:10:56 2016 +0100 : print_hex.c non resolu
+a0ea53f7c596cb8ee621ab1d355a2f9870f6a610 - Exam 42, Tue Feb 9 10:41:26 2016 +0100 : ft_strdup.c
+346a76307a8de0b232af44608d8bdc24be222735 - Exam 42, Tue Feb 9 10:20:39 2016 +0100 : rev_print.c
+f40a5d728ac190a3fb88352450d557194843556d - Exam 42, Tue Feb 9 10:04:38 2016 +0100 : only_a.c
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/q8/1s8v63095kj234b48tln9_hh0000gq/T/tmp817hD2/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1493 Feb  9 13:59 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 13:59 epur_str
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 13:59 ft_split
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 13:59 ft_strdup
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 13:59 only_a
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 13:59 print_hex
+drwxr-xr-x  3 deepthought  deepthought   102 Feb  9 13:59 rev_print
+
+/var/folders/q8/1s8v63095kj234b48tln9_hh0000gq/T/tmp817hD2/user/epur_str:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1571 Feb  9 13:59 epur_str.c
+
+/var/folders/q8/1s8v63095kj234b48tln9_hh0000gq/T/tmp817hD2/user/ft_split:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1542 Feb  9 13:59 ft_split.c
+
+/var/folders/q8/1s8v63095kj234b48tln9_hh0000gq/T/tmp817hD2/user/ft_strdup:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1270 Feb  9 13:59 ft_strdup.c
+
+/var/folders/q8/1s8v63095kj234b48tln9_hh0000gq/T/tmp817hD2/user/only_a:
+total 8
+-rw-r--r--  1 deepthought  deepthought  963 Feb  9 13:59 only_a.c
+
+/var/folders/q8/1s8v63095kj234b48tln9_hh0000gq/T/tmp817hD2/user/print_hex:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1228 Feb  9 13:59 print_hex.c
+
+/var/folders/q8/1s8v63095kj234b48tln9_hh0000gq/T/tmp817hD2/user/rev_print:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1196 Feb  9 13:59 rev_print.c
+ 
+= ft_split =====================================================================
+$> clang -Wextra -Wall -Werror ft_split.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./96abjp1k48l1o89rvjbu5jaf ""
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./ecqrt514b2hl9ku8wbi1il80 " 
+ 	 
+	"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./3yc7zcvae2x9r3qxcci8v5si "	   		"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./v8hnyph58k1zo3rzjxljme7l "VE15Rrbj"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+--- user_output_test4	2016-02-09 13:59:29.000000000 +0100$
++++ test4.output	2016-02-09 13:59:29.000000000 +0100$
+@@ -0,0 +1 @@$
++VE15Rrbj$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

@@ -1,0 +1,97 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r1p9.42.fr
+Darwin 15.3.0 x86_64
+$> date
+Tue Feb  9 10:41:46 CET 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.3.0
+Thread model: posix
+$> clang --version
+Apple LLVM version 7.0.2 (clang-700.1.81)
+Target: x86_64-apple-darwin15.3.0
+Thread model: posix
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/piscine-c-formation-c-exam-formation/exam_20160209/mdaoui
+
+= Git history ==================================================================
+$> git -C /var/folders/mf/lfkn7gs51f37kjw6r4hc_p540000gq/T/tmpBRujjj/user log --pretty='%H - %an, %ad : %s'
+a0ea53f7c596cb8ee621ab1d355a2f9870f6a610 - Exam 42, Tue Feb 9 10:41:26 2016 +0100 : ft_strdup.c
+346a76307a8de0b232af44608d8bdc24be222735 - Exam 42, Tue Feb 9 10:20:39 2016 +0100 : rev_print.c
+f40a5d728ac190a3fb88352450d557194843556d - Exam 42, Tue Feb 9 10:04:38 2016 +0100 : only_a.c
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/mf/lfkn7gs51f37kjw6r4hc_p540000gq/T/tmpBRujjj/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  715 Feb  9 10:41 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Feb  9 10:41 ft_strdup
+drwxr-xr-x  3 deepthought  deepthought  102 Feb  9 10:41 only_a
+drwxr-xr-x  3 deepthought  deepthought  102 Feb  9 10:41 rev_print
+
+/var/folders/mf/lfkn7gs51f37kjw6r4hc_p540000gq/T/tmpBRujjj/user/ft_strdup:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1270 Feb  9 10:41 ft_strdup.c
+
+/var/folders/mf/lfkn7gs51f37kjw6r4hc_p540000gq/T/tmpBRujjj/user/only_a:
+total 8
+-rw-r--r--  1 deepthought  deepthought  963 Feb  9 10:41 only_a.c
+
+/var/folders/mf/lfkn7gs51f37kjw6r4hc_p540000gq/T/tmpBRujjj/user/rev_print:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1196 Feb  9 10:41 rev_print.c
+ 
+= ft_strdup ====================================================================
+$> clang -Wextra -Wall -Werror main.c ft_strdup.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./7pwatxlzsxf4fbimiyx93ia0 ""
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./vx89tr6rxmwwhx3n3so0yik4 "d5j7CsRHnO1BGb"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./r3nhmnj9u6vo9y7qbb3oq55c "CwUAYgiVpt"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./rkuyd4tsroiyir8dwnrzjpbk "QwfBq3Yt56UEerpah"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./phx2xaa5hltc28lov22285h4 "0af9J5AyzIcRX"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./y9ow5a3gsxiq4ox8l2e8hjga "X8O4lzuFRL w7jlaBTWGm yfgA c2OQyj UhCQb2x QJ29 CVethNOx2YGZFcsr NbqRBK4viC Bwe75v30aGhN NLKhV7Yo FBj"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./6dpox5jbadz5xpiguzrrx55s "f65mQGvc28tr nBbe ghTQ7OY3lUouM C5TqySdJXfN 1WKC5 e12qYMQgwvKhzn 674H8lWJTMwg nd6CjbNW38KH5ZY IVOn6ebzYq p0fdkOwPerbJ2Mh8 YC1U7daklNAE UZc0Yvl7 kMpbmPijIgdtaU e6BVz DfIRkG"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./s5m40qi7b66zxd0k4d2bmtwa "hrap7OVCc8yKut u2kXoYlCLPStBr v8jPMoGiy UFwgTkZM j0os W7MiL riFxlYZ4a 6o4jS7OnvtKY fcr2vLuVM wWp6H8DM2rhygCj 0ErxhMKGqo KicJR6up Qy8MjcKz7NAo9sa 05o8lKvDhmIkqQ9 rMWNGo0K LK2msd7Nqkvn3tc IDuhQjy6pKgmOoL9v JUxR9"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./f9t2kdi6fph8i6c2oxka0rij "HngGrc MoIf26 Jiu xIlUENWT F7YmsAgIp1RyaN mGvMg9bxOc1iZ rsMa4gK mV8aU19k0AE6sMt qT8h6rDsowWUkic iE6uTSHaDszFLBPmM z7se IZaF6i MOrExpG Sz3Wp8nfdB97cmj Vyps Rl8t6"
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
